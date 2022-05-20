@@ -1,14 +1,20 @@
 <template>
   <div class="home">
-    <div class='column is-fourth-fifths is-offset-one-fifth'>
-        <router-link to='/all-products'><h3>ALL PRODUCTS</h3></router-link>
+    <div class='column is-full '>
+      <div class='box has-text-centered'>
+        <router-link to='/all-products'><h3 class='subtitle'>ALL PRODUCTS</h3></router-link>
+      </div>
     </div>
     <div class='columns'>
-        <div class="column is-half">
+        <div class="column ">
+          <div class='box has-text-centered'>
             <router-link to='/styles'>LOOK BY STYLE</router-link>
+          </div>
         </div>
-        <div class='column is-half'>
+        <div class='column '>
+          <div class='box has-text-centered'>
             <router-link to='/companies'>LOOK BY COMPANY</router-link>
+          </div>
         </div>
     </div>
     

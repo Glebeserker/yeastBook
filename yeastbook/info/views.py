@@ -27,6 +27,19 @@ class AllYeast(APIView):
         yeast = Yeast.objects.all()
         serializer = YeastSerializer(yeast, many = True)
         return Response(serializer.data)
+
+class AllDetailYeast(APIView):
+
+    def get_object(self, yeast_slug):
+        try:
+            return Yeast.objects.get(slug = yeast_slug)
+        except Yeast.DoesNotExist:
+            raise Http404
+
+    def get(self, request, yeast_slug, format=None):
+        yeast = self.get_object(yeast_slug)
+        serializer = YeastSerializer(yeast)
+        return Response(serializer.data)
     
 class CompanyFilteredView(APIView):
     

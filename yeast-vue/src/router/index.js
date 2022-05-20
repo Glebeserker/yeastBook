@@ -5,6 +5,7 @@ import TypesView from '../views/TypesView'
 import CompaniesDetail from '../views/CompaniesDetail'
 import TypesDetail from '../views/TypesDetail'
 import AllProducts from '../views/AllProducts'
+import YeastDetailAll from '../views/YeastDetailAll'
 
 
 const routes = [
@@ -45,6 +46,11 @@ const routes = [
     path: '/all-products',
     name: 'AllProducts',
     component: AllProducts
+  },
+  {
+    path: '/:slug',
+    name: 'YeastDetailAll',
+    component: YeastDetailAll
   }
 ]
 

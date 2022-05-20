@@ -10,5 +10,6 @@ urlpatterns = [
     path('companies/<slug:company_slug>/', views.CompanyFilteredView.as_view()),
     path('types/<slug:type_slug>/', views.TypeFilteredView.as_view()),
     path('types/<slug:type_slug>/<slug:yeast_slug>/', views.TypedYeastView.as_view()),
-    path('companies/<slug:company_slug>/<slug:yeast_slug>/', views.CompanyYeastView.as_view())
+    path('companies/<slug:company_slug>/<slug:yeast_slug>/', views.CompanyYeastView.as_view()),
+    path('<slug:yeast_slug>/', views.AllDetailYeast.as_view())
 ]
